@@ -16,3 +16,27 @@
 .price-discount{display:flex;flex-direction:column;align-items:flex-start;gap:5px;margin:12px 0 16px}.price-discount .old-price{position:relative;display:inline-block;color:#bcb6c9;font-size:clamp(19px,2.1vw,27px);font-weight:750;letter-spacing:.015em;opacity:.9}.price-discount .old-price:after{content:"";position:absolute;left:-3%;right:-3%;top:52%;height:3px;background:#ff3656;transform:rotate(-7deg);border-radius:3px;box-shadow:0 0 10px #ff365666}.price-discount .package-price{margin:0;color:#fff;filter:drop-shadow(0 0 14px #ac51f555)}.pricing-card.highlighted .price-discount .package-price{color:#e3b1ff}.price-discount .package-price small{color:inherit}
 
 .footer-service{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 22px;padding:20px 24px;margin:18px auto 0;max-width:1180px;border-top:1px solid rgba(186,119,255,.25);color:#d9cfe9;text-align:center}.footer-service strong{color:#f2c8ff}.footer-service a{color:#d9a2ff;text-decoration:none;font-weight:700}.footer-service a:hover{text-decoration:underline}@media(max-width:600px){.footer-service{flex-direction:column;gap:8px;padding:16px}}
+
+/* V10: accessible premium product navigation */
+nav .nav-products{position:relative;display:flex;align-items:center}
+nav .nav-products-toggle{display:inline-flex;align-items:center;gap:6px}
+.nav-products-menu{position:absolute;top:100%;left:0;min-width:260px;padding:10px;background:#151027;border:1px solid rgba(195,114,255,.48);box-shadow:0 20px 55px #05030dbd,0 0 22px #8b3fff36;border-radius:16px;display:flex;flex-direction:column;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .2s,transform .2s,visibility .2s;z-index:100}
+.nav-products:hover .nav-products-menu,.nav-products:focus-within .nav-products-menu{opacity:1;visibility:visible;transform:translateY(0)}
+nav .nav-products-menu a{display:block;padding:12px 14px;border-radius:9px;white-space:nowrap;color:#eee7fc;font-size:14px}
+nav .nav-products-menu a:hover,nav .nav-products-menu a:focus-visible{background:#823bd441;color:#fff}
+.products-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:32px}
+.product-panel{min-width:0;overflow:hidden;border-radius:22px;background:linear-gradient(145deg,#1b1432,#0d0c1c);border:1px solid #8c4bb66e;box-shadow:0 16px 45px #03020988;transition:transform .25s,border-color .25s}
+.product-panel:hover{transform:translateY(-5px);border-color:#bf72ff}
+.product-image{height:185px;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 70%,#622e9c70,transparent 68%)}
+.product-image img{height:150px;max-width:80%;object-fit:contain}
+.product-info{padding:24px}.product-info h2{font-size:clamp(23px,2.5vw,31px);margin:12px 0}.product-info p{line-height:1.7;min-height:92px;color:#c7c0d9}.product-info .btn{margin-top:14px}
+@media(max-width:850px){.products-grid{grid-template-columns:1fr}nav .nav-products{display:block;width:100%}.nav-products-menu{position:static;display:flex;opacity:1;visibility:visible;transform:none;box-shadow:none;min-width:0;padding:0 0 0 14px;border:0;background:transparent}.nav-products-menu a{white-space:normal;font-size:13px;padding:7px 12px}.product-info p{min-height:0}}
+
+/* V11: Mobilde her iki WhatsApp butonunda sehir adlarini goster. */
+@media (max-width:600px){
+ .float-contact{right:10px;bottom:calc(12px + env(safe-area-inset-bottom, 0px));gap:8px;max-width:calc(100vw - 20px)}
+ .float-contact a{display:flex;align-items:center;justify-content:flex-start;gap:8px;padding:10px 13px;border-radius:24px;white-space:nowrap;font-size:12px;line-height:1.2;min-height:42px;box-shadow:0 6px 22px #0009}
+ .float-contact a span{display:inline!important;visibility:visible!important;white-space:nowrap}
+ .float-contact img{width:21px;height:21px;flex:0 0 21px}
+}
+@media (max-width:360px){.float-contact a{font-size:11px;padding:9px 11px}.float-contact{right:7px}}

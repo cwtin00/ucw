@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ucwyazilim.com.tr/sitemap.xml

@@ -86,3 +86,21 @@ body:has(.contact-social) section.contact-social{padding-top:28px}
 .service-tile.tile-web .tile-copy p,.service-tile.tile-qr .tile-copy p,.service-tile.tile-social .tile-copy p{color:#f2f7f1;max-width:370px;font-weight:550}
 @media(max-width:850px){.service-tile.tile-web,.service-tile.tile-qr,.service-tile.tile-social{min-height:320px}.service-tile .service-photo{object-position:center}}
 @media(prefers-reduced-motion:reduce){.service-tile .service-photo{transition:none!important}}
+
+/* V21: Ensure arrow icons remain visible on dark backgrounds. */
+.btn-dark .ucw-arrow,
+.support-card .btn .ucw-arrow,
+.price .btn-dark .ucw-arrow,
+.social-tile.dark .ucw-arrow,
+.v11-footer .v11-phone .ucw-arrow,
+.v11-footer-grid a .ucw-arrow,
+.footer a:not(.v11-footer-cta) .ucw-arrow,
+a[style*="background:#102"] .ucw-arrow,
+a[style*="background: #102"] .ucw-arrow {
+  filter: brightness(0) invert(1);
+}
+/* Keep dark arrows on light green CTA buttons. */
+.btn-lime .ucw-arrow,
+.v11-footer-cta .ucw-arrow,
+.wa-float .ucw-arrow,
+.v11-more .btn .ucw-arrow {filter:none;}

@@ -104,3 +104,24 @@ a[style*="background: #102"] .ucw-arrow {
 .v11-footer-cta .ucw-arrow,
 .wa-float .ucw-arrow,
 .v11-more .btn .ucw-arrow {filter:none;}
+
+/* Fiyatlandırma - tüm özellikler bağlantısı */
+.price .ucw-all-features {
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:15px 17px;margin:14px 0 16px;border:1px solid rgba(14,47,41,.22);
+  border-radius:14px;text-decoration:none;color:#102e29;
+  background:rgba(255,255,255,.38);transition:background .2s,border-color .2s,transform .2s;
+}
+.price .ucw-all-features:hover,.price .ucw-all-features:focus-visible {
+  background:rgba(255,255,255,.72);border-color:#102e29;transform:translateY(-2px);
+}
+.ucw-all-features strong{display:block;font-size:15px;line-height:1.4}
+.ucw-all-features small{display:block;font-size:12px;line-height:1.5;margin-top:5px;opacity:.78}
+.ucw-feature-arrow{font-size:27px;font-weight:700;line-height:1;flex-shrink:0}
+.ucw-price-note{max-width:880px;margin:26px auto 0;text-align:center;font-size:14px;line-height:1.75;color:#425650}
+@media(max-width:600px){
+ .price .ucw-all-features{padding:14px;gap:10px}
+ .ucw-all-features strong{font-size:14px}
+ .ucw-all-features small{font-size:11px}
+ .ucw-price-note{padding:0 8px;font-size:13px}
+}

@@ -73,3 +73,16 @@ body:has(.contact-social) section.contact-social{padding-top:28px}
  .hamb{position:relative;z-index:1001;cursor:pointer}
  html{scroll-padding-top:86px}
 }
+
+
+/* V19: Service cards with branded photography and readable copy */
+.service-tile.tile-web,.service-tile.tile-qr,.service-tile.tile-social{background:#142b27;color:#fff;min-height:285px}
+.service-tile .service-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;z-index:-2;transition:transform .65s ease,filter .45s ease;filter:saturate(.9)}
+.service-tile.tile-web::after,.service-tile.tile-qr::after,.service-tile.tile-social::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(180deg,rgba(5,22,20,.75) 0%,rgba(5,22,20,.24) 34%,rgba(5,22,20,.78) 100%)}
+.service-tile.tile-web:hover .service-photo,.service-tile.tile-qr:hover .service-photo,.service-tile.tile-social:hover .service-photo{transform:scale(1.055)}
+.service-tile.tile-web .tile-top,.service-tile.tile-qr .tile-top,.service-tile.tile-social .tile-top{color:#f2fff4;text-shadow:0 1px 12px #000a}
+.service-tile.tile-web .tile-copy,.service-tile.tile-qr .tile-copy,.service-tile.tile-social .tile-copy{max-width:100%;text-shadow:0 2px 16px #000b}
+.service-tile.tile-web .tile-copy h3,.service-tile.tile-qr .tile-copy h3,.service-tile.tile-social .tile-copy h3{color:#fff;font-weight:800}
+.service-tile.tile-web .tile-copy p,.service-tile.tile-qr .tile-copy p,.service-tile.tile-social .tile-copy p{color:#f2f7f1;max-width:370px;font-weight:550}
+@media(max-width:850px){.service-tile.tile-web,.service-tile.tile-qr,.service-tile.tile-social{min-height:320px}.service-tile .service-photo{object-position:center}}
+@media(prefers-reduced-motion:reduce){.service-tile .service-photo{transition:none!important}}

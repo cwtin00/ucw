@@ -61,3 +61,15 @@ body:has(.contact-social) section.contact-social{padding-top:28px}
 .contact-social .social-grid{gap:16px}
 .wa-float{white-space:nowrap}
 @media(max-width:760px){.contact-social{padding:42px 0 64px!important}.contact-social .services-heading{margin-bottom:22px}.contact-social .services-heading h2{font-size:clamp(2rem,8vw,3.1rem)}.contact-social .social-grid{gap:12px}.contact-social .whatsapp-grid{margin-top:12px}.wa-float{right:14px;bottom:14px;padding:12px 16px;font-size:12px;max-width:calc(100vw - 28px)}.page-hero{padding:62px 0}.page-hero h1{font-size:clamp(2.3rem,9vw,3.7rem);overflow-wrap:break-word}.social-tile{min-width:0}}
+
+/* V17: consistent custom diagonal arrow icon across all pages */
+.ucw-arrow{display:inline-block;width:1.65em;height:1.65em;vertical-align:-.42em;margin-left:.24em;background:url("assets/arrow-up-right.png") center/contain no-repeat;flex-shrink:0}
+/* Keep mobile navigation accessible throughout scrolling. */
+@media(max-width:850px){
+ body{padding-top:76px}
+ .nav{position:fixed!important;top:0!important;left:0;right:0;width:100%;z-index:1000!important}
+ .nav-inner{height:76px}
+ .links{position:absolute;top:100%;max-height:calc(100dvh - 76px);overflow-y:auto;overscroll-behavior:contain}
+ .hamb{position:relative;z-index:1001;cursor:pointer}
+ html{scroll-padding-top:86px}
+}
